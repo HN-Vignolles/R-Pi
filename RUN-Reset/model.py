@@ -3,7 +3,7 @@ from IPython.display import display,Math,Latex,Markdown
 import matplotlib.pyplot as plt
 from matplotlib.ticker import (AutoMinorLocator, MultipleLocator)
 
-df = pd.read_csv("model.csv", sep="\t")
+df = pd.read_csv("model_39ms.csv", sep="\t")
 display(df.head(6))
 
 fig = plt.figure(figsize=(32,4))
