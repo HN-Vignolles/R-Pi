@@ -22,20 +22,22 @@ ISR(PCINT0_vect){
       for(int i = 0; i < int_nr; i++) __asm__ __volatile__ ("nop\n\t");
       PORTB &= ~(1 << PB4);
       for(int i = 0; i < 50; i++) __asm__ __volatile__ ("nop\n\t");
-    } else {
+    }
+  }
+  if(int_nr >= 500 && int_nr < 1000){
+    if((PINB & (1 << PB3)) == 0){
       PORTB |= (1 << PB1);
-      for(int i = 0; i < 50 + int_nr; i++) __asm__ __volatile__ ("nop\n\t");
+      for(int i = 0; i < 50; i++) __asm__ __volatile__ ("nop\n\t");
+      for(int i = 0; i < (int_nr - 500); i++) __asm__ __volatile__ ("nop\n\t");
       PORTB &= ~(1 << PB1);
       for(int i = 0; i < 50; i++) __asm__ __volatile__ ("nop\n\t");
     }
   }
-  if(int_nr >= 500 && int_nr < 1000){
+  if(int_nr >= 1000 && int_nr < 1500){
     PORTB &= ~(1 << PB4);
     PORTB &= ~(1 << PB1);
-    for(int i = 0; i < 200; i++)
-        __asm__ __volatile__ ("nop\n\t");
   }
-  if(int_nr >= 1000){
+  if(int_nr >= 1500){
     int_nr = 0;
   }
 }

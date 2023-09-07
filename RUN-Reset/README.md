@@ -11,9 +11,24 @@ It also provides a path for common mode 50hz or 60hz line noise, which is ~80Vrm
 
 &nbsp;
 
+## Model
+
+<img src="./images/model.png" width="50%"/>
+
+V is the voltage after the full-bridge rectifier with respect to mains earth, for a 50Hz mains (20ms period)<br/>
+The pulse signal controlling the closing of the path to ground has a period of 19ms, effectively creating a phase sweep.<br/>
+
+| <img src="./images/model-plot_01.png"/> | <img src="./images/model-plot_02.png"/> |
+| ------ | ----- |
+| <img src="./images/model-plot_03.png"/> | <img src="./images/model-plot_04.png"/> |
+
+&nbsp;
+
+## Emulator
+
 Doing aggressive and repetitive resets was also risky so I designed an emulator, taking into account the open drain output of the XR77004, with the CMOS input of the BCM2837B
 
-<img src="./images/RUN-Reset.svg" style="background-color: white;" width="1200px"/>
+<img src="./images/RUN-Reset.svg" style="background-color: white;" width="80%"/>
 
 ## Differential Probe Calibration:
 
