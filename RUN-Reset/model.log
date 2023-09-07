@@ -2,20 +2,20 @@ Circuit: * F:\_GithubBK-CV_W10\R-Pi\RUN-Reset\model.asc
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Mon Sep 04 10:34:43 2023
-Total elapsed time: 0.696 seconds.
+Date: Thu Sep 07 00:11:26 2023
+Total elapsed time: 1.206 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 454463
-traniter = 454459
-tranpoints = 108189
-accept = 81679
-rejected = 26510
+totiter = 449344
+traniter = 449340
+tranpoints = 106865
+accept = 80790
+rejected = 26075
 matrix size = 9
 fillins = 1
 solver = Normal
-Matrix Compiler1: 354 bytes object code size  0.1/0.0/[0.0]
+Matrix Compiler1: 340 bytes object code size  0.1/0.0/[0.0]
 Matrix Compiler2: off  [0.0]/0.1/0.0
 
