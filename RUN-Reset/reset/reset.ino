@@ -16,10 +16,10 @@ void loop(){
 ISR(PCINT0_vect){
   GIMSK &= ~bit(PCIE);
   if(PINB & (1 << PB3)){
-    int_nr++;
+    int_nr+=3;
     for(int i = 0; i < int_nr; i++) __asm__ __volatile__ ("nop\n\t");
     PORTB |= (1 << PB4);
-    for(int i = 0; i < 400; i++) __asm__ __volatile__ ("nop\n\t");
+    for(int i = 0; i < 500; i++) __asm__ __volatile__ ("nop\n\t");
     PORTB &= ~(1 << PB4);
     if(int_nr >= 1800){
       int_nr = 0;
