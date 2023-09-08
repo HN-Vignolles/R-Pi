@@ -28,7 +28,26 @@ The pulse signal controlling the closing of the path to ground has a period of 1
 
 Doing aggressive and repetitive resets was also risky so I designed an emulator, taking into account the open drain output of the XR77004, with the CMOS input of the BCM2837B
 
-<img src="./images/RUN-Reset.svg" style="background-color: white;" width="80%"/>
+<table>
+  <tr>
+    <td>
+      <figure><img src="./images/RUN-Reset_SW.png" width="800px"/><figcaption>Full-Wave MOSFET switch</figcaption><figure>
+    </td>
+    <td>
+      <figure><img src="./images/RUN-Reset_Sim.png"/><figcaption>RUN pin simulator</figcaption><figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <figure><img src="./images/P1260125.gif"/><figcaption>Phase Sweep: The reset occurs during the negative (AC coupling) half cycle.</figcaption><figure>
+    </td>
+    <td>
+      <figure><img src="./images/P1260126.gif"/><figcaption></figcaption><figure>
+    </td>
+  </tr>
+</table>
+
+&nbsp;
 
 ## Differential Probe Calibration:
 
