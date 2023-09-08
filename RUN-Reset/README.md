@@ -13,7 +13,7 @@ It also provides a path for common mode 50hz or 60hz line noise, which is ~80Vrm
 
 ## Model
 
-<img src="./images/model.png" width="50%"/>
+<img src="./images/model.png" width="80%"/>
 
 V is the voltage after the full-bridge rectifier with respect to mains earth, for a 50Hz mains (20ms period)<br/>
 The pulse signal controlling the closing of the path to ground has a period of 19ms, effectively creating a phase sweep.<br/>
