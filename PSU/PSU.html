@@ -14818,7 +14818,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 El espesor de los conductores no son adecuados y además influye la longitud del cable<br/>
                 Esto es esperable, dado que el estándar USB 2.0 para un conector micro USB exige un calibre para los conductores
                 de alimentación de un mínimo de 28 AWG, y por supuesto, los fabricantes usarán el mínimo.<br/>
-                El azul transparente parecería tener un mayor calibre, es más corto y por tanto tendrá menor caída de tensión.
+                El azul transparente (genérico) es más corto y por tanto tendrá menor caída de tensión.
             </p>
         </td>
     </tr>
@@ -14848,8 +14848,18 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
+<li>USB2.0<ul>
+<li>El estándar fue pensado para 5v@100mA de alimentación inicial y 5v@500mA luego del "negociado". La mayoría de cargadores ignoran estos límites, pero los cables son los mismos</li>
 <li>Los conectores USB2.0 micro-B son fabricados, en general, para soportar 1.8A max en los pines de alimentación, con una resistencia de contacto de 30mΩ max</li>
-<li>Los conectores USB-C admiten entre 3A y 5A, con una resistencia de contacto de 30mΩ</li>
+</ul>
+</li>
+<li>USB-C<ul>
+<li>La corriente mínima tras negociado es de 900mA.</li>
+<li>Los cables de USB-A 2.0 a USB-C por norma deben admitir 3A de corriente.</li>
+<li>La máxima caída de tensión para la línea VBus, incluyendo contactos es de 500mV; para GND es 250mV.</li>
+<li>Los conectores USB-C admiten entre 3A y 5A, con una resistencia de contacto de 30mΩ (según algunos fabricantes)</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -14909,15 +14919,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 
-<h2 id="Medicion-de-ripple-y-prueba-de-stress:">Medicion de ripple y prueba de stress:<a class="anchor-link" href="#Medicion-de-ripple-y-prueba-de-stress:">&#182;</a></h2><ul>
+<h2 id="Medicion-de-ripple-y-prueba-de-stress:">Medicion de ripple y prueba de stress:<a class="anchor-link" href="#Medicion-de-ripple-y-prueba-de-stress:">&#182;</a></h2><h3 id="Raspberry-Pi-3b+">Raspberry Pi 3b+<a class="anchor-link" href="#Raspberry-Pi-3b+">&#182;</a></h3><ul>
 <li>Resistencias de potencia de 1.7Ω  y 2.7Ω para la prueba de ripple.</li>
 <li><code>stress-ng -c 4 -l 95 -t 30</code> para la prueba de stress. Se indica min/max de un multímetro en modo captura.</li>
-<li>Display 7" HDMI alimentado por puerto USB de una Raspberry Pi 3b+, como demanda adicional de corriente.</li>
-<li>La columna "USB" indica que se alimenta la Raspberry por USB, ya sea por el cable propio de la fuente, o uno azul transparente de 268mΩ (resistencia del conductor rojo)<ul>
+<li>Display 7" HDMI alimentado por puerto USB como demanda adicional de corriente.</li>
+<li>La columna "USB" indica que se alimenta la Raspberry por USB, ya sea por el cable propio de la fuente, o el color azul mencionado, de 268mΩ (resistencia del conductor rojo)<ul>
 <li>⛔ Indica que el cable USB ya está incorporado en la fuente y esta prueba seria inválida</li>
 </ul>
 </li>
-<li>La columna "+5V" indica alimentación por medio del correspondiente pin. ➡️ indica que no es necesaria esta prueba, al pasar la prueba por USB</li>
+<li>La columna "+5V" indica alimentación por medio del correspondiente pin mediante un cable armado</li>
+<li>➡️ indica que no es necesaria esta prueba, al pasar la prueba por USB</li>
 </ul>
 <table style="text-align:center">
     <tr>
@@ -14927,28 +14938,39 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </tr>
     <tr>
         <td>A</td><td>B</td><td>A</td><td>B</td>
-        <td>USB</td><td>Vmin </td><td>Vmax </td><td>+5V pin</td><td>Vmin </td><td>Vmax </td><td>USB</td><td>Vmin </td><td>Vmax </td><td>+5V pin</td><td>Vmin </td><td>Vmax </td>
+        <td>USB</td><td>Vmin</td><td>Vmax</td><td>+5V pin</td><td>Vmin</td><td>Vmax</td><td>USB</td><td>Vmin</td><td>Vmax</td><td>+5V pin</td><td>Vmin</td><td>Vmax</td>
     </tr>
     <tr><td>Pronext FU-5V2500          </td><td>184  @1.67A</td><td>242  @2.35A</td><td>43  @1.67A</td><td>48  @2.35A</td>
-        <td>✅ </td><td>4.865</td><td>5.124</td><td>⛔     </td><td>-    </td><td>-    </td><td>✅ </td><td>4.751</td><td>4.961</td><td>⛔     </td><td>-    </td><td>-   </td></tr>
+        <td>✅</td><td>4.865</td><td>5.124</td><td>⛔</td><td>-</td><td>-</td>
+        <td>✅</td><td>4.751</td><td>4.961</td><td>⛔</td><td>-</td><td>-</td></tr>
     <tr><td>Probattery FASW-053100F    </td><td>70.0 @1.70A</td><td>65.1 @2.50A</td><td>5.7 @1.70A</td><td>6.1 @2.50A</td>
-        <td>✅ </td><td>4.957</td><td>5.173</td><td>⛔     </td><td>-    </td><td>-    </td><td>✅ </td><td>4.793</td><td>5.008</td><td>⛔     </td><td>-    </td><td>-   </td></tr>
+        <td>✅</td><td>4.957</td><td>5.173</td><td>⛔</td><td>-</td><td>-</td>
+        <td>✅</td><td>4.793</td><td>5.008</td><td>⛔</td><td>-</td><td>-</td></tr>
     <tr><td>Motorola "TurboPower" SC-56</td><td>89.9 @1.65A</td><td>86.9 @2.40A</td><td>12  @1.65A</td><td>13  @2.40A</td>
-        <td>✅ </td><td>4.731</td><td>5.031</td><td>➡️</td><td>-</td><td>-</td><td>❌ </td><td><span style="color:red">4.492</span></td><td>4.868</td><td>✅</td><td>4.888</td><td>5.093</td></tr>
+        <td>✅</td><td>4.731</td><td>5.031</td><td>➡️</td><td>-</td><td>-</td>
+        <td>❌</td><td><span style="color:red">4.492</span></td><td>4.868</td><td>✅</td><td>4.888</td><td>5.093</td></tr>
     <tr><td>DC/DC 5V 5A "XY-3606T"     </td><td>88.8 @1.62A</td><td>86.0 @2.33A</td><td>10  @1.62A</td><td>10  @2.33A</td>
-        <td>✅ </td><td>4.731</td><td>5.069</td><td>➡️</td><td>-</td><td>-</td><td>❌ </td><td><span style="color:red">4.485</span></td><td>4.817</td><td>✅</td><td>4.940</td><td>5.072</td></tr>
+        <td>✅</td><td>4.731</td><td>5.069</td><td>➡️</td><td>-</td><td>-</td>
+        <td>❌</td><td><span style="color:red">4.485</span></td><td>4.817</td><td>✅</td><td>4.940</td><td>5.072</td></tr>
     <tr><td>DC/DC 5V 3A "HW-298"       </td><td>285  @1.66A</td><td>213  @2.40A</td><td>74  @1.66A</td><td>54  @2.40A</td>
-        <td>⛔✅❌</td><td>-</td><td>-</td><td>-</td></tr>
+        <td>✅</td><td>4.757</td><td>5.050</td><td>➡️</td><td>-</td><td>-</td>
+        <td>❌</td><td><span style="color:red">4.546</span></td><td>4.849</td><td>✅</td><td>4.885</td><td>5.052</td></tr>
     <tr><td>DC/DC 5V 2A MP2314         </td><td>80.6 @1.62A</td><td>78.0 @2.33A</td><td>7.2 @1.62A</td><td>7.3 @2.33A</td>
-        <td>⛔✅❌</td><td>-</td><td>-</td><td>-</td></tr>
-    <tr><td>DC/DC MP1584               </td><td>80.1 @1.64A</td><td>1020 @2.34A</td><td>7.0 @1.64A</td><td>350 @2.34A</td>
-        <td>⛔✅❌</td><td>-</td><td>-</td><td>-</td></tr>
-    <tr><td>DC/DC LM2596HVS            </td><td>572  @1.69A</td><td>387  @2.38A</td><td>160 @1.69A</td><td>103 @2.38A</td>
-        <td>⛔✅❌</td><td>-</td><td>-</td><td>-</td></tr>
+        <td>✅</td><td><span style="color:yellow">4.674</span></td><td>4.967</td><td>➡️</td><td>-</td><td>-</td>
+        <td>❌</td><td><span style="color:red">4.399</span></td><td>4.761</td><td>✅</td><td>4.882</td><td>5.009</td></tr>
+    <tr><td>DC/DC MP1584 @5.18V        </td><td>80.1 @1.64A</td><td>1020 @2.34A</td><td>7.0 @1.64A</td><td>350 @2.34A</td>
+        <td>❌</td><td><span style="color:red">4.621</span></td><td>5.027</td><td>✅</td><td>4.789</td><td>5.082</td>
+        <td>❌</td><td><span style="color:red">4.582</span></td><td>4.749</td><td>✅</td><td>4.718</td><td>4.913</td></tr>
+    <tr><td>DC/DC LM2596HVS @5.18V     </td><td>572  @1.69A</td><td>387  @2.38A</td><td>160 @1.69A</td><td>103 @2.38A</td>
+        <td>❌</td><td>4.587</td><td>4.998</td><td>✅</td><td>4.837</td><td>5.081</td>
+        <td>❌</td><td><span style="color:red">4.519</span></td><td><span style="color:yellow">4.685</span></td><td>✅</td><td>4.742</td><td>4.913</td></tr>
     <!--<tr><td>ATX PSU[^1]                </td><td>88.3 @1.55A</td><td>97.0 @2.22A</td><td>6.0 @1.55A</td><td>10  @2.22A</td>
         <td>❌</td><td>✅</td><td>-</td><td>-</td></tr>-->
 </table><p>Las pruebas realizadas son sencillas. Sirven como comparación entre una o otra fuente. El ripple real, la eficiencia, switching slew rate, etc. quedarán pendientes.</p>
-
+<figure style="text-align: center">
+    <img src="images/PB_HDMI_75_95.png" width="800px" style="background: white"/>
+    <figcaption style="text-align: center">Ejemplo de variación de tensión medida en el pin +5V. Fuente Probattery con distintas demandas</figcaption>
+</figure>
 </div>
 </div>
 </div>
@@ -14958,9 +14980,43 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Raspberry-Pi-4">Raspberry Pi 4<a class="anchor-link" href="#Raspberry-Pi-4">&#182;</a></h3><ul>
+<li>Display 7" HDMI alimentado por la Raspberry</li>
+<li>Raspberry Pi alimentada por USB-C (cable original del Motorola TurboPower, 198mΩ entre pin 1 y pin A1)</li>
+<li>Raspbian 11 Desktop; Case Argon ONE V2; WiFi+BT on</li>
+<li><code>stress-ng -c 4 -l 95 -t 30</code></li>
+</ul>
+<table style="text-align:center">
+    <tr>
+        <th rowspan=2>Fuente</th>
+        <th colspan=3><span style="font-family:monospace;color:khaki;">stress-ng</span>&nbsp; 95% + HDMI display</th>
+        <th colspan=3><span style="font-family:monospace;color:khaki;">stress-ng</span>&nbsp; 95% + HDMI display + Hub*</th>
+    </tr>
+    <tr>
+        <td>USB-C</td><td>Vmin</td><td>Vmax</td><td>USB-C</td><td>Vmin</td><td>Vmax</td>
+    </tr>
+    <tr><td>Motorola "TurboPower" SC-56</td>
+        <td>✅</td><td>4.896</td><td>5.067</td><td>✅</td><td>4.894</td><td>5.070</td></tr>
+    <tr><td>DC/DC 5V 5A "XY-3606T"     </td>
+        <td>✅</td><td>4.800</td><td>4.966</td><td>✅</td><td>4.755</td><td>4.950</td></tr>
+    <tr><td>DC/DC 5V 3A "HW-298"       </td>
+        <td>✅</td><td>4.880</td><td>5.056</td><td>❌</td><td><span style="color:red">1.517 (H)</span></td><td>5.010</td></tr>
+    <tr><td>DC/DC 5V 2A MP2314         </td>
+        <td>✅</td><td>4.733</td><td>4.948</td><td>❌</td><td><span style="color:red">4.085 (H)</span></td><td>5.023</td></tr>
+    <tr><td>DC/DC MP1584 @5.18V        </td>
+        <td>❌</td><td><span style="color:red">4.475</span></td><td>5.037</td><td>❌</td><td><span style="color:red">(H)</span></td><td><span style="color:red">(H)</td></tr>
+    <tr><td>DC/DC LM2596HVS @5.18V     </td>
+        <td>❌</td><td><span style="color:red">(H)</span></td><td><span style="color:red">(H)</span></td>
+        <td>❌</td><td><span style="color:red">(H)</span></td><td><span style="color:red">(H)</span></td></tr>
+    <!--<tr><td>ATX PSU[^1]                </td><td>88.3 @1.55A</td><td>97.0 @2.22A</td><td>6.0 @1.55A</td><td>10  @2.22A</td>
+        <td>❌</td><td>✅</td><td>-</td><td>-</td></tr>-->
+</table><ul>
+<li>*El Hub incluye un módulo FT2232H, adaptador USB a PS2, y una capturadora USBTV007</li>
+<li>(H) Hiccup mode, reseteo contínuo.</li>
+</ul>
 <figure style="text-align: center">
-    <img src="images/PB_HDMI_75_95.png" width="800px" style="background: white"/>
-    <figcaption style="text-align: center">Tensión medida en el pin +5V. Fuente Probattery con distintas demandas</figcaption>
+    <img src="images/LM2596_Failure.png" width="800px" style="background: white"/>
+    <figcaption style="text-align: center">Ejemplos de brownouts y caídas significativas de tensión (LM2596 alimentando una R-Pi4)</figcaption>
 </figure><p>&nbsp;</p>
 <h3 id="Estados-del-LED-rojo">Estados del LED rojo<a class="anchor-link" href="#Estados-del-LED-rojo">&#182;</a></h3><ul>
     <li>Continuo: alimentación adecuada</li>
