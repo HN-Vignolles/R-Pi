@@ -85,7 +85,7 @@ The input to the microcontroller is a pulse of 20 ms period (AC mains). The risi
 
 - Ground the Raspberry Pi to mains earth using a 1uF X-Capacitor
 - A capacitor of 1500uF between RUN and R-Pi_GND was not enough.
-- Isolation transformer: It must be good, really good. This is equivalent to putting a capacitor (the parasitic capacitance between primary and secondary, maybe around 1nF), in series with the Y cap from the SMPS. This could be thought of as reducing the capacitance and then, reducing the Vrms leakage. $$X_c = \frac{1}{2\pi fC}$$
+- Isolation transformer: This is equivalent to putting a capacitor (the parasitic capacitance between primary and secondary, maybe around 1nF), in series with the Y cap from the SMPS. This could be thought of as reducing the capacitance and then, reducing the Vrms leakage. Still not enough. ( $X_c = \frac{1}{2\pi fC}$ )
 
 &nbsp;
 
