@@ -14802,75 +14802,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-
-<h2 id="Cables">Cables<a class="anchor-link" href="#Cables">&#182;</a></h2><table style="cellpadding: 0px">
-    <tr>
-        <td>
-            <figure style="text-align: center">
-                <img src="images/micro-usb.jpg" width=400px style="background: white"/>
-                <figcaption style="text-align: center"></figcaption>
-            </figure>
-        </td>
-        <td>
-            <p style="word-wrap: break-word; width: 400px">
-                El cable color negro es original, de un celular Samsung, pero no superó la prueba de demanda.
-                El espesor de los conductores no son adecuados y además influye la longitud del cable<br/>
-                Esto es esperable, dado que el estándar USB 2.0 para un conector micro USB exige un calibre para los conductores
-                de alimentación de un mínimo de 28 AWG, y por supuesto, los fabricantes usarán el mínimo.<br/>
-                El azul transparente (genérico) es más corto y por tanto tendrá menor caída de tensión.
-            </p>
-        </td>
-    </tr>
-        <td>
-            <figure style="text-align: center">
-                <img src="images/OTG.jpg" width=500px style="background: white"/>
-                <figcaption style="text-align: center"></figcaption>
-            </figure>
-        </td>
-        <td>
-            Ante problemas de caídas de tensión en cables, podemos:
-            <ul style="word-wrap: break-word; width: 300px">
-                <li>Armar un cable usb de un calibre mínimo de 20 o 18 AWG, con un conector micro-USB en un extremo
-                    (o bien usando un adaptador OTG), y el otro según el tipo de fuente (Si tiene socket USB o cables directamente soldados)</li>
-                <li>Se puede obviar el conector micro-USB, y alimentar directamente al pin 5V de la Raspberry
-                    Pero al hacerlo se omite el fusible reseteable que está entre el socket micro-USB de la R-Pi y el rail de 5V</li>
-            </ul> 
-        </td>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>USB2.0<ul>
-<li>El estándar fue pensado para 5v@100mA de alimentación inicial y 5v@500mA luego del "negociado". La mayoría de cargadores ignoran estos límites, pero los cables son los mismos</li>
-<li>Los conectores USB2.0 micro-B son fabricados, en general, para soportar 1.8A max en los pines de alimentación, con una resistencia de contacto de 30mΩ max</li>
-</ul>
-</li>
-<li>USB-C<ul>
-<li>La corriente mínima tras negociado es de 900mA.</li>
-<li>Los cables de USB-A 2.0 a USB-C por norma deben admitir 3A de corriente.</li>
-<li>La máxima caída de tensión para la línea VBus, incluyendo contactos es de 500mV; para GND es 250mV.</li>
-<li>Los conectores USB-C admiten entre 3A y 5A, con una resistencia de contacto de 30mΩ (según algunos fabricantes)</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><hr></p>
 <p><div style="text-align: center">
     <h2>Menciones de Honor</h2>
@@ -14908,6 +14839,164 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
         </td>
     </tr>
 </table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+
+<h2 id="Cables">Cables<a class="anchor-link" href="#Cables">&#182;</a></h2><ul>
+<li>USB-2.0 micro-B<ul>
+<li>El estándar fue pensado para 5v@100mA de alimentación inicial y 5v@500mA luego del "negociado". La mayoría de cargadores ignoran estos límites, pero los cables son los mismos</li>
+<li>Los conectores USB-2.0 micro-B son fabricados, en general, para soportar 1.8A max en los pines de alimentación, con una resistencia de contacto de 30mΩ max</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>USB-C<ul>
+<li>La corriente mínima tras negociado es de 900mA.</li>
+<li>Los cables de USB-A 2.0 a USB-C por norma deben admitir 3A de corriente.</li>
+<li>La máxima caída de tensión para la línea VBus, incluyendo contactos es de 500mV; para GND es 250mV.</li>
+<li>Los conectores USB-C admiten entre 3A y 5A, con una resistencia de contacto de 30mΩ (según algunos fabricantes)</li>
+</ul>
+</li>
+</ul>
+<table style="cellpadding: 0px">
+    <tr>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/micro-usb.jpg" width=400px style="background: white"/>
+                <figcaption style="text-align: center"></figcaption>
+            </figure>
+        </td>
+        <td>
+            <p style="word-wrap: break-word; width: 400px">
+                El cable color negro es original, de un celular Samsung, pero no superó la prueba de demanda.
+                El espesor de los conductores no son adecuados y además influye la longitud del cable.<br/>
+                Esto es esperable, dado que el estándar exige un calibre para los conductores de alimentación de un mínimo de 28 AWG, y por supuesto, los fabricantes usarán el mínimo.<br/>
+                El azul transparente (genérico) es más corto y por tanto tendrá menor caída de tensión.<br/>
+                (Suelen venir con Arduínos clones)<br/>
+                <br/>
+                Un buen cable USB 2.0 deberá estar mallado, y esta malla formará parte de la conexión eléctrica entre las vainas metálicas de los plugs extremos.
+                Tanto la Raspberry Pi como las fuentes de alimentación testeadas conectan la malla a GND, aprovechando la malla, y reduciendo la caída de tensión en la línea GND<br/>
+                Sin embargo el cable azul transparente mostrado no tiene esta conexión hecha.
+            </p>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<table style="cellpadding: 0px">
+    <tr>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/DEBO_MICROUSB_2_001.png" width=300px style="background: white"/>
+                <figcaption style="text-align: center">USB micro-B breakout board</figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/usb-male-to-dip-breakout-board.webp" width=400px style="background: white"/>
+                <figcaption style="text-align: center">USB-A breakout board</figcaption>
+            </figure>
+        </td>
+        <td>
+            <p style="word-wrap: break-word; width: 300px">
+                Ante problemas de caídas de tensión en cables, podemos armar uno, ya sea reciclando los conectores de otros cables o comprando unos. Se podría adaptar un cable USB-C a micro-B con algún adaptador, pero no lo he probado.<br/>
+                El cable armado deberá tener un calibre mínimo de 20 o 18 AWG<br/>
+                <br/>
+                También se puede obviar el conector micro-USB, y alimentar directamente al pin 5V de la Raspberry, 
+                pero al hacerlo se omite el fusible reseteable que está entre el socket micro-USB de la R-Pi y el rail de 5V
+            </p>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Armado-de-un-cable">Armado de un cable<a class="anchor-link" href="#Armado-de-un-cable">&#182;</a></h2><table style="cellpadding: 0px">
+    <tr>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB01.jpg" width=400px style="background: white"/>
+                <figcaption style="text-align: center">Desarmamos un cable fuera de norma</figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB02.jpg" width=300px style="background: white"/>
+                <figcaption style="text-align: center">Usamos manguitos de Heat Shrink</figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB03.jpg" width=400px style="background: white"/>
+                <figcaption style="text-align: center"></figcaption>
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB04.jpg" width=300px style="background: white"/>
+                <figcaption style="text-align: center">Heat Shrink 8.0/4.0 para el exterior sobre uno de 7.0/3.5</figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB05.jpg" width=400px style="background: white"/>
+                <figcaption style="text-align: center"></figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB06.jpg" width=400px style="background: white"/>
+                <figcaption style="text-align: center"></figcaption>
+            </figure>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB07.jpg" width=300px style="background: white"/>
+                <figcaption style="text-align: center">Aplicamos silicona y moldeamos con cinta de papel</figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB08.jpg" width=400px style="background: white"/>
+                <figcaption style="text-align: center"></figcaption>
+            </figure>
+        </td>
+        <td>
+            <figure style="text-align: center">
+                <img src="images/USBmicroB09.jpg" width=400px style="background: white"/>
+                <figcaption style="text-align: center">Usamos uno de 13.0/6.5 sobre uno de 9.0/4.5</figcaption>
+            </figure>
+        </td>
+    </tr>
+</table><p>El cable armado tiene una resistencia de 104.3mΩ  <br/>
+La medición de estas resistencias, al ser bajas, se realizó haciendo pasar una corriente mayor a 1.5A, midiendo la caída de tensión para luego usar la ley de Ohm</p>
+
 </div>
 </div>
 </div>
@@ -14964,9 +15053,21 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr><td>DC/DC LM2596HVS @5.18V     </td><td>572  @1.69A</td><td>387  @2.38A</td><td>160 @1.69A</td><td>103 @2.38A</td>
         <td>❌</td><td>4.587</td><td>4.998</td><td>✅</td><td>4.837</td><td>5.081</td>
         <td>❌</td><td><span style="color:red">4.519</span></td><td><span style="color:orange">4.685</span></td><td>✅</td><td>4.742</td><td>4.913</td></tr>
+    <tr><td></td></tr>
+    <tr><td>DC/DC 5V 3A "HW-298"</td><td colspan=4>Repetimos, utilizando el cable armado en lugar del genérico</td></tr>
     <!--<tr><td>ATX PSU[^1]                </td><td>88.3 @1.55A</td><td>97.0 @2.22A</td><td>6.0 @1.55A</td><td>10  @2.22A</td>
         <td>❌</td><td>✅</td><td>-</td><td>-</td></tr>-->
 </table><p>Las pruebas realizadas son sencillas. Sirven como comparación entre una o otra fuente. El ripple real, la eficiencia, switching slew rate, etc. quedarán pendientes.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <figure style="text-align: center">
     <img src="images/PB_HDMI_75_95.png" width="800px" style="background: white"/>
     <figcaption style="text-align: center">Ejemplo de variación de tensión medida en el pin +5V. Fuente Probattery con distintas demandas</figcaption>
@@ -15014,6 +15115,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li>*El Hub incluye un módulo FT2232H, adaptador USB a PS2, y una capturadora USBTV007</li>
 <li>(H) Hiccup mode, reseteo contínuo.</li>
 </ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <figure style="text-align: center">
     <img src="images/LM2596_Failure.png" width="800px" style="background: white"/>
     <figcaption style="text-align: center">Ejemplos de brownouts y caídas significativas de tensión (LM2596 alimentando una R-Pi4)</figcaption>
