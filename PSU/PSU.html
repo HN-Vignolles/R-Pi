@@ -15020,65 +15020,92 @@ La medición de estas resistencias, al ser bajas, se realizó haciendo pasar una
 <li>La columna "+5V" indica alimentación por medio del correspondiente pin mediante un cable armado</li>
 <li>➡️ indica que no es necesaria esta prueba, al pasar la prueba por USB</li>
 </ul>
-<table style="text-align:center">
+<table style="text-align:center; font-size:x-small">
     <tr>
         <th rowspan=2>Fuente</th><th rowspan=2>Imax<br/>(A)</th><th colspan=2>Ripple (mVpp)</th><th colspan=2>Ripple (mVrms)</th>
+        <!--<th rowspan=2>SWF<br/>(KHz)</th>-->
         <th colspan=6><span style="font-family:monospace;color:orange;">stress-ng</span>&nbsp; 95% &nbsp; ~4.97W</th>
         <th colspan=6><span style="font-family:monospace;color:orange;">stress-ng</span>&nbsp; 95% + HDMI display &nbsp; ~8.34W</th>
+        <!--<th rowspan=2>%Ef</th>-->
         <th rowspan=2>link</th><th rowspan=2>Precio @ML<br/>(19/09/23)</th>
     </tr>
     <tr>
         <td>A</td><td>B</td><td>A</td><td>B</td>
         <td>USB</td><td>Vmin</td><td>Vmax</td><td>+5V pin</td><td>Vmin</td><td>Vmax</td><td>USB</td><td>Vmin</td><td>Vmax</td><td>+5V pin</td><td>Vmin</td><td>Vmax</td>
     </tr>
-    <tr><td>Pronext FU-5V2500          </td><td>2.5</td><td>184  @1.67A</td><td>242  @2.35A</td><td>43  @1.67A</td><td>48  @2.35A</td>
+    <tr><td>Pronext FU-5V2500          </td><td>2.5</td>
+        <td>216 @1.70A</td><td>204 @2.42A</td><td>62.4 @1.70A</td><td>61.3 @2.42A</td>
+        <!--<td>34.0</td>-->
         <td>✅</td><td>4.865</td><td>5.124</td><td>⛔</td><td>-</td><td>-</td>
         <td>✅</td><td>4.751</td><td>4.961</td><td>⛔</td><td>-</td><td>-</td>
+        <!--<td>78..88</td>-->
         <td>-</td>
         <td>-</td></tr>
-    <tr><td>Probattery FASW-053100F    </td><td>3.1</td><td>70.0 @1.70A</td><td>65.1 @2.50A</td><td>5.7 @1.70A</td><td>6.1 @2.50A</td>
+    <tr><td>Probattery FASW-053100F    </td><td>3.1</td>
+        <td>25.5 @1.70A</td><td>26.1 @2.49A</td><td>5.39 @1.70A</td><td>5.13 @2.49A</td>
+        <!--<td>64.5</td>-->
         <td>✅</td><td>4.957</td><td>5.173</td><td>⛔</td><td>-</td><td>-</td>
         <td>✅</td><td>4.793</td><td>5.008</td><td>⛔</td><td>-</td><td>-</td>
+        <!--<td>78..88</td>-->
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-735964658-fuente-homologada-25a-microusb-raspberry-pi-filtro-emakers-_JM">🔗</a></td>
         <td>$8.588</td></tr>
-    <tr><td>Motorola "TurboPower" SC-56</td><td>3.0</td><td>89.9 @1.65A</td><td>86.9 @2.40A</td><td>12  @1.65A</td><td>13  @2.40A</td>
+    <tr><td>Motorola "TurboPower" SC-56</td><td>3.0</td>
+        <td>39.2 @1.60A</td><td>45.0 @2.32A</td><td>10.4 @1.60A</td><td>12.2 @2.32A</td>
+        <!--<td>72</td>-->
         <td>✅</td><td>4.731</td><td>5.031</td><td>➡️</td><td>-</td><td>-</td>
         <td>❌</td><td><span style="color:red">4.492</span></td><td>4.868</td><td>✅</td><td>4.888</td><td>5.093</td>
         <td>-</td>
         <td>-</td></tr>
-    <tr><td>DC/DC 5V5A "XY-3606T"      </td><td>5.0</td><td>88.8 @1.62A</td><td>86.0 @2.33A</td><td>10  @1.62A</td><td>10  @2.33A</td>
+    <tr><td>DC/DC 5V5A "XY-3606T"      </td><td>5.0</td>
+        <td>88.8 @1.62A</td><td>86.0 @2.33A</td><td>10 @1.62A</td><td>10 @2.33A</td>
+        <!--<td></td>-->
         <td>✅</td><td>4.731</td><td>5.069</td><td>➡️</td><td>-</td><td>-</td>
         <td>❌</td><td><span style="color:red">4.485</span></td><td>4.817</td><td>✅</td><td>4.940</td><td>5.072</td>
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-823543253-modulo-power-dc-dc-step-down-24v12v-a-5v-5a-4-usb-conversor-_JM">🔗</a></td>
         <td>$9.693</td></tr>
-    <tr><td>DC/DC 5V3A "XY-3606"       </td><td>3.0</td><td> @ A</td><td> @A</td><td> @ A</td><td> @ A</td>
+    <tr><td>DC/DC 5V3A "XY-3606"       </td><td>3.0</td>
+        <td>151 @1.56A</td><td>131 @2.25A</td><td>36.2 @1.56A</td><td>30.9 @2.25A</td>
+        <!--<td>120</td>-->
         <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
         <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-681090787-step-down-usb-xy-3606-9-36v-a-5v-3a-jack-dc-itytarg-_JM">🔗</a></td>
         <td>$6.871</td></tr>
-    <tr><td>DC/DC 5V "KIS-3R33S"       </td><td>3.0</td><td> @ A</td><td> @A</td><td> @ A</td><td> @ A</td>
+    <tr><td>DC/DC 5V "KIS-3R33S"       </td><td>3.0</td>
+        <td>70.4 @1.54A</td><td>64.0 @2.21A</td><td>19.3 @1.54A</td><td>16.5 @2.21A</td>
+        <!--<td>330</td>-->
         <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
         <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-677165816-step-down-kis3r33s-usb-dc-7v-24-v-a-5v-3a-itytarg-_JM">🔗</a></td>
         <td>$3.875</td></tr>
-    <tr><td>DC/DC 5V "HW-298"          </td><td>3.0</td><td>285  @1.66A</td><td>213  @2.40A</td><td>74  @1.66A</td><td>54  @2.40A</td>
+    <tr><td>DC/DC 5V "HW-298"          </td><td>3.0</td>
+        <td>188 @1.61A</td><td>163 @2.33A</td><td>55 @1.61A</td><td>46.5 @2.33A</td>
+        <!--<td>108</td>-->
         <td>✅</td><td>4.757</td><td>5.050</td><td>➡️</td><td>-</td><td>-</td>
         <td>❌</td><td><span style="color:red">4.546</span></td><td>4.849</td><td>✅</td><td>4.885</td><td>5.052</td>
+        <!--<td>90..97</td>-->
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-1160569902-modulo-regulador-voltaje-dc-dc-step-down-usb-8-32v-a-5v-3a-_JM">🔗</a></td>
         <td>$2.999</td></tr>
-    <tr><td>DC/DC 5V MP2314            </td><td>2.2</td><td>80.6 @1.62A</td><td>78.0 @2.33A</td><td>7.2 @1.62A</td><td>7.3 @2.33A</td>
+    <tr><td>DC/DC 5V MP2314            </td><td>2.2</td>
+        <td>127 @1.60A</td><td>180 @2.27A</td><td>13.8 @1.60A</td><td>17.8 @2.27A</td>
+        <!--<td></td>-->
         <td>✅</td><td><span style="color:orange">4.674</span></td><td>4.967</td><td>➡️</td><td>-</td><td>-</td>
         <td>❌</td><td><span style="color:red">4.399</span></td><td>4.761</td><td>✅</td><td>4.882</td><td>5.009</td>
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-861215214-modulo-de-carga-usb-entrada-6-a-24v-salida-5v-3a-15watts-_JM">🔗</a></td>
         <td>$2.659</td></tr>
-    <tr><td>DC/DC MP1584 @5.18V        </td><td>2.2</td><td>80.1 @1.64A</td><td>1020 @2.34A</td><td>7.0 @1.64A</td><td>350 @2.34A</td>
+    <tr><td>DC/DC MP1584 @5.18V        </td><td>2.2</td>
+        <td>17 @1.59A</td><td>1400 @2.25A</td><td>4.2 @1.59A</td><td>433 @2.25A</td>
+        <!--<td>95</td>-->
         <td>❌</td><td><span style="color:red">4.621</span></td><td>5.027</td><td>✅</td><td>4.789</td><td>5.082</td>
         <td>❌</td><td><span style="color:red">4.582</span></td><td>4.749</td><td>✅</td><td>4.718</td><td>4.913</td>
+        <!--<td>82..91</td>-->
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-822447925-modulo-fuente-dc-dc-step-down-08-20v-3-amper-mp1584-_JM">🔗</a></td>
         <td>$2.179</td></tr>
-    <tr><td>DC/DC LM2596HVS @5.18V     </td><td>3.0</td><td>572  @1.69A</td><td>387  @2.38A</td><td>160 @1.69A</td><td>103 @2.38A</td>
+    <tr><td>DC/DC LM2596HVS @5.18V     </td><td>3.0</td>
+        <td>630 @1.54A</td><td>532 @2.21A</td><td>183 @1.54A</td><td>154 @2.21A</td>
+        <!--<td>52</td>-->
         <td>❌</td><td><span style="color:red">4.587</span></td><td>4.998</td><td>✅</td><td>4.837</td><td>5.081</td>
         <td>❌</td><td><span style="color:red">4.519</span></td><td><span style="color:orange">4.685</span></td><td>✅</td><td>4.742</td><td>4.913</td>
+        <!--<td>..94</td>-->
         <td><a href="https://articulo.mercadolibre.com.ar/MLA-677246804-lm2596-fuente-step-down-dc-dc-123-30v-3a-arduino-orig-gtia-_JM">🔗</a></td>
         <td>$1.450</td></tr>
     <tr><td></td></tr>
@@ -15087,7 +15114,7 @@ La medición de estas resistencias, al ser bajas, se realizó haciendo pasar una
         <td>✅</td><td>4.749</td><td>4.949</td><td>➡️</td><td>-</td><td>-</td></tr>
     <!--<tr><td>ATX PSU[^1]                </td><td>88.3 @1.55A</td><td>97.0 @2.22A</td><td>6.0 @1.55A</td><td>10  @2.22A</td>
         <td>❌</td><td>✅</td><td>-</td><td>-</td></tr>-->
-</table><p>Las pruebas realizadas son sencillas. Sirven como comparación entre una o otra fuente. El ripple real, la eficiencia, frecuencia, switching slew rate, etc. quedarán pendientes.</p>
+</table><p>Las pruebas realizadas son sencillas. Sirven como comparación entre una o otra fuente. El ripple real, la eficiencia, etc. quedarán pendientes.</p>
 
 </div>
 </div>
@@ -15317,7 +15344,10 @@ Este problema se elimina aterrizando la R-Pi, con una conexión directa a tierra
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Otros-componentes">Otros componentes<a class="anchor-link" href="#Otros-componentes">&#182;</a></h2><h3 id="Capacitores-electrol%C3%ADticos">Capacitores electrol&#237;ticos<a class="anchor-link" href="#Capacitores-electrol%C3%ADticos">&#182;</a></h3><p>La mayoría de los encontrados en estas fuentes, son de electrolito líquido. Los foil de aluminio (ánodo y cátodo) son separados por un papel impregnado en electrolito líquido. Al calentarse por encima de la temperatura máxima para la cual están fabricados, el electrolito comienza a ganar presión de vapor, y el armazón del capacitor se expande, liberándose parte del electrolito tanto por el sello de goma inferior, como por las ranuras de seguridad marcadas en la parte superior. Esta pérdida de electrolito aumenta el ESR, lo que aumenta la temperatura bajo corrientes de ripple, lo que continúa con este efecto bola de nieve, hasta que el capacitor pierde por completo su función.</p>
+<h2 id="Otros-componentes">Otros componentes<a class="anchor-link" href="#Otros-componentes">&#182;</a></h2><h3 id="Capacitores-electrol%C3%ADticos">Capacitores electrol&#237;ticos<a class="anchor-link" href="#Capacitores-electrol%C3%ADticos">&#182;</a></h3><p>La mayoría de los encontrados en estas fuentes, son de electrolito líquido. Los foils de aluminio (ánodo y cátodo) son separados por un papel impregnado en electrolito líquido. Al calentarse por encima de la temperatura máxima para la cual están fabricados, el electrolito comienza a ganar presión de vapor, y el armazón del capacitor se expande, liberándose parte del electrolito tanto por el sello de goma inferior, como por las ranuras de seguridad marcadas en la parte superior. Esta pérdida de electrolito aumenta el ESR, lo que aumenta la temperatura bajo corrientes de ripple, lo que continúa con este efecto bola de nieve, hasta que el capacitor pierde por completo su función.</p>
+<p>En un recinto cerrado como el de varias fuentes citadas, la eficiencia de las mismas determinará la temperatura de sus componentes: una fuente con una eficiencia del 88%, con una potencia de salida de 12.5W, disipará 1.5W en forma de calor. Si la eficiencia es muy baja, este calor tendrá efectos nocivos en los capacitores electrolíticos.</p>
+<p>Una fuente bien diseñada (y cuidada) podría durar décadas sin daños en sus capacitores.</p>
+<p>Pueden encontrarse capacitores situados cerca de componentes con tendencia a calentarse. Esto no es preocupante; habrá transmisión de calor por convección y radiación, pero dentro de los parámetros de seguridad. Diferente sería el caso grave de un capacitor en contacto directo con un disipador metálico, donde se suma la transmisión por conducción (ver fuente Belsic). También puede ocurrir que capacitores baratos marcados para 105°C, realmente no estén hechos para esa temperatura.</p>
 
 </div>
 </div>
